@@ -9,7 +9,7 @@ from web import handlers
 secure_scheme = 'https'
 
 _routes = [
-    RedirectRoute('/secure/', handlers.SecureRequestHandler, name='secure', strict_slash=True),
+    RedirectRoute('/', handlers.SecureRequestHandler),
 ]
 
 def get_routes():

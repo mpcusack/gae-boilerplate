@@ -77,6 +77,7 @@ def handle_error(request, response, exception):
     c = {
         'exception': str(exception),
         'url': request.url,
+        'long_exception': traceback.format_exception(exc_type, exc_value, exc_tb)
     }
 
     if request.app.config.get('send_mail_developer') is not False:
@@ -112,6 +113,7 @@ def handle_error(request, response, exception):
     template = request.app.config.get('error_templates')[status_int]
     t = jinja2.get_jinja2(factory=jinja2_factory, app=webapp2.get_app()).render_template(template, **c)
     logging.error(str(status_int) + " - " + str(exception))
+    # logging.error(traceback.format_exception(exc_type, exc_value, exc_tb))
     response.write(t)
     response.set_status(status_int)
 

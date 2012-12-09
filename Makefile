@@ -1,6 +1,6 @@
 
-GAEPATH = $(HOME)/bin/google_appengine
-PORT=8089
+GAEPATH = /home/mpcusack/Dropbox/Documents/Programming/AppEngine/google_appengine_1.7.3
+PORT=8080
 
 PYLINTS = $(wildcard *.py \
 	libs/*.py \

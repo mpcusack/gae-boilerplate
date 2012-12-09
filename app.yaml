@@ -1,5 +1,5 @@
-application: sandengine
-version: 2-2
+application: question-vetter
+version: 0-0-2
 runtime: python27
 api_version: 1
 threadsafe: true
