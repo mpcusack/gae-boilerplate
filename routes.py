@@ -6,10 +6,12 @@ RedirectRoute: http://webapp-improved.appspot.com/api/webapp2_extras/routes.html
 
 from webapp2_extras.routes import RedirectRoute
 from web import handlers
+from web import make_some
 secure_scheme = 'https'
 
 _routes = [
     RedirectRoute('/', handlers.SecureRequestHandler),
+    RedirectRoute('/make_some', make_some.Handler),
 ]
 
 def get_routes():

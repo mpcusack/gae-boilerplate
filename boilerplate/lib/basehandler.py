@@ -77,7 +77,7 @@ def handle_error(request, response, exception):
     c = {
         'exception': str(exception),
         'url': request.url,
-        'long_exception': traceback.format_exception(exc_type, exc_value, exc_tb)
+        'long_exception': ''.join(traceback.format_exception(exc_type, exc_value, exc_tb))
     }
 
     if request.app.config.get('send_mail_developer') is not False:
