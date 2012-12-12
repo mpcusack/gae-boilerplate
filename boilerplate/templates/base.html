@@ -44,7 +44,7 @@
     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
            chromium.org/developers/how-tos/chrome-frame-getting-started -->
     <!--[if lt IE 8]>
-    	<p class=chromeframe>{% trans %}Your browser is <em>ancient!</em>{% endtrans %} 
+    	<p class=chromeframe>{% trans %}Your browser is <em>ancient!</em>{% endtrans %}
     	{% trans %}<a href="http://browsehappy.com/">Upgrade to a different browser</a>
     	or <a href="http://www.google.com/chromeframe/?redirect=true">
     	install Google Chrome Frame</a> to experience this site.{% endtrans %}</p>
@@ -132,24 +132,6 @@
             <header class="navbar" id="overview">
                 {% block header_title_lead %}
                 <h1>{% block header_title %}{{ app_name }}{% endblock %}</h1>
-                <p class="lead">
-		            {% trans %}Congratulations on your Google App Engine Boilerplate powered page.{% endtrans %}
-		            <br><a href="http://github.com/coto/gae-boilerplate/blob/master/README.rdoc" target="_blank">
-		            {% trans %}Learn why this Boilerplate Rocks{% endtrans %}</a> {% trans %}or just{% endtrans %} 
-		            <a href="http://github.com/coto/gae-boilerplate/" target="_blank">{% trans %}download the Source Code{% endtrans %}</a> 
-		            {% trans %}to help you to create your application.{% endtrans %}
-				</p>
-                {% endblock %}
-                {% block subnavbar %}
-                <div class="subnav">
-                    <ul>
-                        <li{% if path == uri_for("contact") %} class="active"{% endif %}><a href="{{ uri_for("contact") }}">{% trans %}Contact{% endtrans %}</a></li>
-                        {% if not user_id %}
-                        <li{% if path == uri_for("register") %} class="active"{% endif %}><a href="{{ uri_for("register") }}">{% trans %}Sign Up{% endtrans %}</a></li>
-                        <li{% if path == uri_for("password-reset") %} class="active"{% endif %}><a href="{{ uri_for("password-reset") }}">{% trans %}Forgot your password?{% endtrans %}</a></li>
-                        {% endif %}
-                    </ul>
-                </div>
                 {% endblock %}
             </header>
             {% endblock %}
@@ -165,9 +147,6 @@
             {% block content %}{% endblock %}
 
             {% block footer %}
-            <footer>
-                {% trans %}Google App Engine Boilerplate is released under the{% endtrans %} <a href="http://www.gnu.org/licenses/gpl-3.0.html" target="_blank">LGPL</a>
-            </footer>
             {% endblock %}
         </div><!-- /content -->
     </div><!-- /page -->

@@ -12,6 +12,7 @@ secure_scheme = 'https'
 _routes = [
     RedirectRoute('/', handlers.SecureRequestHandler),
     RedirectRoute('/make_some', make_some.Handler),
+    RedirectRoute('/question/<:[a-zA-Z0-9]+>', handlers.QuestionHandler)
 ]
 
 def get_routes():
@@ -22,3 +23,4 @@ def add_routes(app):
         secure_scheme = 'http'
     for r in _routes:
         app.router.add(r)
+
