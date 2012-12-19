@@ -19,7 +19,8 @@
     {% if is_mobile %}
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     {% endif %}
-    <link rel="stylesheet" href="/boilerplate/css/boilerplate.min.css">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="/boilerplate/css/boilerplate.min.css"> -->
     <link rel="stylesheet" href="/css/style.css">
     {% block mediaCSS %}{% endblock %}
     <script type="text/javascript">
@@ -38,7 +39,8 @@
     </script>
     <!-- All JavaScript at the bottom, except this Modernizr build.
        Modernizr enables HTML5 elements & feature detects for optimal performance. -->
-    <script src="/boilerplate/js/libs/modernizr-2.6.1.min.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 </head>
 <body>
     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
@@ -159,7 +161,8 @@
 
     <!-- scripts concatenated and minified via build script -->
     <script src="/boilerplate/js/plugins.js"></script>
-    <script src="/boilerplate/js/script.js"></script>
+    <!-- <script src="/boilerplate/js/script.js"></script> -->
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
     <script src="/js/script.js"></script>
     {% if locale_language_id != "en" %}
         {% if locale_iso.language and locale_iso.territory %}
