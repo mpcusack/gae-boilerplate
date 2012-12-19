@@ -208,7 +208,7 @@ class LoginHandler(BaseHandler):
                 user=user.key,
                 uastring=self.request.user_agent,
                 ip=self.request.remote_addr,
-                timestamp=utils.get_date_time()
+             timestamp=utils.get_date_time()
             )
             logVisit.put()
             if continue_url:
@@ -354,7 +354,7 @@ class CallbackSocialLoginHandler(BaseHandler):
             # get our request code back from the social login handler above
             code = self.request.get('code')
 
-            # create our github auth object 
+            # create our github auth object
             scope = 'gist'
             github_helper = github.GithubAuth(self.app.config.get('github_server'), self.app.config.get('github_client_id'), \
                                               self.app.config.get('github_client_secret'), self.app.config.get('github_redirect_uri'), scope)
@@ -663,7 +663,7 @@ class DeleteSocialProviderHandler(BaseHandler):
                     message = _('Social account on %s not found for this user.' % provider_name)
                     self.add_message(message, 'error')
             else:
-                message = ('Social account on %s cannot be deleted for user.' 
+                message = ('Social account on %s cannot be deleted for user.'
                             '  Please create a username and password to delete social account.' % provider_name)
                 self.add_message(message, 'error')
         self.redirect_to('edit-profile')

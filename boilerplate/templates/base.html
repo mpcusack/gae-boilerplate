@@ -19,8 +19,8 @@
     {% if is_mobile %}
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     {% endif %}
-    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="/boilerplate/css/boilerplate.min.css"> -->
+    <!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="/boilerplate/css/boilerplate.min.css">
     <link rel="stylesheet" href="/css/style.css">
     {% block mediaCSS %}{% endblock %}
     <script type="text/javascript">
@@ -62,7 +62,7 @@
                 <a class="brand" href="/">{{ app_name }}</a>
                 <div class="nav-collapse">
                     <ul class="nav pull-right">
-                        <li><a href="https://github.com/coto/gae-boilerplate" target="_blank"><span class="icon-inbox" ></span> {% trans %}Source Code{% endtrans %}</a></li>
+<!--                         <li><a href="https://github.com/coto/gae-boilerplate" target="_blank"><span class="icon-inbox" ></span> {% trans %}Source Code{% endtrans %}</a></li> -->
                         {% if locale_iso %}
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -157,12 +157,13 @@
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="/boilerplate/js/libs/jquery.min.js"><\/script>')</script>
+    <!-- // <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script> -->
     <script src="/boilerplate/js/libs/bootstrap.min.js"></script>
 
     <!-- scripts concatenated and minified via build script -->
     <script src="/boilerplate/js/plugins.js"></script>
     <!-- <script src="/boilerplate/js/script.js"></script> -->
-    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+
     <script src="/js/script.js"></script>
     {% if locale_language_id != "en" %}
         {% if locale_iso.language and locale_iso.territory %}
